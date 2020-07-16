@@ -1,0 +1,7 @@
+<app-top-bar></app-top-bar>
+<div class="layout">
+    <app-bookings-list
+        [bookingsList]="bookingsList$ | async"
+        (searchClick)="onSearchClick({startDate: '2020/07/01'}, {endDate: '2020/07/30'})"> 
+    </app-bookings-list>
+</div>

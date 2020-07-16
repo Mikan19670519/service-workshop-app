@@ -1,0 +1,49 @@
+@import "../../assets/styles/global/utils";
+@import "../../assets/styles/global/variables";
+
+h1 {
+    text-align: center;
+    color: #1976d2;
+    font-weight: bold;
+}
+
+#bookings {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#bookings td, #bookings th {
+    border: 1px sold #ddd;
+    padding: 3px 10px 3px 10px;
+}
+
+#bookings tr:nth-child(even){
+    background-color: #f2f2ff;
+}
+
+#bookings tr:hover {
+    background-color: #ddd;
+}
+
+#bookings th {
+padding-top:12px;
+padding-bottom: 12px;
+text-align: left;
+background-color: lightblue;
+}
+
+#bookings .material-icons {
+    padding: 0;
+    margin-right: 5px;
+  }
+
+  #bookings .material-icons:hover {
+    display: initial;
+  }
+
+  .btn:hover {
+    opacity: .5;
+    text-decoration: none;
+    display: initial;
+}

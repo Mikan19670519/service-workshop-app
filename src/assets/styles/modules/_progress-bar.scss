@@ -1,0 +1,16 @@
+@import "../global/utils";
+@import "../global/variables";
+
+.progress-bar {
+  border-radius: rem(28px);
+
+  &-card {
+    border: 1px grey-lite solid;
+    border-radius: rem(10px);
+    margin: 0;
+    padding: rem(20px);
+    > .col {
+      padding: 0;
+    }
+  }
+}

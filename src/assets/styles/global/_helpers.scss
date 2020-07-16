@@ -1,0 +1,122 @@
+@import "./utils";
+@import "./variables";
+
+
+.font-weight-semibold {
+  font-weight: 600;
+}
+
+
+p {
+  font-size: rem(14px);
+}
+
+
+.w-350-auto {
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.w-540-auto {
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+.w-730-auto {
+  max-width: 730px;
+  margin: 0 auto;
+}
+
+.w-925-auto {
+  max-width: 925px;
+  margin: 0 auto;
+}
+
+mark {
+  color: $blue;
+  background: none;
+  padding: 0;
+}
+
+
+.container-md {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1140px;
+}
+
+.font-size {
+  &-14 {
+    font-size: rem(14px);
+  }
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: rem(80px);
+
+  &-has-sidebar {
+    padding: 0 0 0 270px;
+  }
+
+  &-content {
+    padding: rem(80px) 0 rem(20px) 0;
+    &-centered {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  @media screen and (max-width: 960px){
+    height: rem(70px);
+    padding: 0 !important;
+
+    &-content {
+      padding: rem(70px) 0 rem(20px) 0;
+    }
+  }
+}
+
+.team-enquiry-modal-window {
+  .modal-dialog {
+    @media (min-width: 600px){
+      max-width: 400px;
+    }
+  }
+}
+
+.agreements-modal-window {
+  .modal-dialog {
+    @media (min-width: 600px){
+      max-width: 600px;
+    }
+  }
+}
+
+.cdk-overlay-container {
+  z-index: 1051;
+}
+
+.px-md-4_5 {
+  @media screen and (min-width: 960px) {
+    padding-left: rem(40px) !important;
+    padding-right: rem(20px) !important;
+  }
+}
+
+.mb{
+  &-md {
+    &-32 {
+      @media screen and (min-width: 960px) {
+        margin-bottom: rem(32px) !important;
+      }
+    }
+  }
+}

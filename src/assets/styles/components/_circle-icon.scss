@@ -1,0 +1,22 @@
+.circle-icon {
+  width: rem(72px);
+  height: rem(72px);
+  font-size: rem(24px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  &-primary {
+    background: $primary;
+    color: $white;
+  }
+
+  &-success {
+    background: $hs-alert-success;
+    color: $white;
+  }
+
+  .material-icons {
+    font-size: rem(30px);
+  }
+}

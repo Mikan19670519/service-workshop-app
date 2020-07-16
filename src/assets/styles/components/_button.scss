@@ -1,0 +1,25 @@
+@import "../global/utils";
+
+.btn {
+  &-with-icon {
+    padding: rem(12px) rem(24px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    i {
+      margin-left: rem(20px);
+    }
+  }
+
+  &-wrapper {
+    @media screen and (max-width:960px) {
+      margin-bottom: rem(20px);
+      .btn {
+        width: 100%;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

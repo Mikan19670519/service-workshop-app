@@ -1,0 +1,174 @@
+@import './utils.scss';
+
+
+$gray-base:              #000 !default;
+$gray-darker:            lighten($gray-base, 13.5%) !default; // #222
+$gray-dark:              lighten($gray-base, 20%) !default;   // #333
+$gray:                   lighten($gray-base, 33.5%) !default; // #555
+$gray-light:             lighten($gray-base, 46.7%) !default; // #777
+$gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
+
+$brand-primary:         darken(#0079c2, 6.5%) !default; // #337ab7
+$brand-success:         #002300 !default;
+$brand-info:            #224499 !default;
+$brand-warning:         #7D6400 !default;
+$brand-danger:          #320000 !default;
+
+$blue: #42CAFD;
+$red: #E04242;
+$white: #ffffff;
+
+$secondary: #C7CED5;
+$danger: #E04242;
+$light: $white;
+$report-grey: #D8D8D8;
+
+$disclaimer-background: #96C5E8;
+$report-navbar-toggle-background: #96C5E8;
+$report-menu-item-color: #0065B3;
+$report-red: #FF2C2D;
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+$font-family-sans-serif: 'Source Sans Pro', sans-serif;
+$heading-font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+
+
+//== Navbar
+$navbar-padding-y: rem(20px);
+$navbar-padding-x: rem(0);
+
+//== Navs
+$nav-pills-link-active-color: #ffffff !important;
+$nav-pills-link-active-bg: black;
+
+
+//== Buttons
+//
+// For each of Bootstrap's buttons, define text, background, and border color.
+$input-btn-font-size: rem(16px);
+$input-btn-padding-y: rem(11px);
+$input-btn-padding-x: rem(33px);
+$btn-font-size: rem(16px);
+$btn-border-radius: rem(8px);
+$btn-font-weight: 600;
+
+//== Buttons + Forms
+//
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+$input-padding-y: rem(12px);
+$input-padding-x: rem(16px);
+$input-color: black;
+$input-height-inner: rem(48px);
+$input-border-radius: rem(10px);
+$form-feedback-icon-valid: '';
+$form-feedback-icon-invalid: '';
+$input-border-width-focused: 1px;
+$outline-appearance-label-offset: 0;
+
+//== Alert
+$alert-border-radius: 10px;
+$alert-padding-y: 0.75rem;
+$alert-padding-x: 0.95rem;
+$alert-border-level: 2;
+$alert-bg-level: -10;
+$alert-color-level: 6;
+
+//== Tooltips
+$tooltip-bg: black;
+$tooltip-opacity: 1;
+$tooltip-padding-y: rem(12px);
+$tooltip-padding-x: rem(12px);
+$tooltip-font-size: rem(12px);
+$tooltip-arrow-color: none;
+$tooltip-border-radius: rem(12px);
+
+//== Modals
+$modal-content-border-radius: rem(10px);
+$modal-content-border-color: #C7CED5;
+
+//== Close
+$close-text-shadow: none;
+
+//== Dropdowns
+$dropdown-border-radius: rem(10px);
+$dropdown-border-color: grey;
+$dropdown-link-hover-bg: grey-lite;
+
+
+// == Cards
+$card-border-radius: rem(10px);
+$card-border-color: grey-lite;
+$card-cap-bg: $white;
+
+//== Progress bars
+
+$progress-border-radius: rem(28px);
+
+//== Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+$grid-breakpoints: (
+    // Extra small screen / phone
+    xs: 0,
+    // Small screen / phone
+    sm: 600px,
+    // Medium screen / tablet
+    md: 960px,
+    // Large screen / desktop
+    lg: 1440px,
+    // Extra large screen / wide desktop
+    xl: 1920px
+);
+
+// Color contrast
+$yiq-contrasted-threshold:  170;
+
+//Box-shadows
+$z-depth-1-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+$z-depth-1-half-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+$z-depth-2-half-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+$z-depth-3-half-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
+$z-depth-4-half-box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3);
+$z-depth-5-half-box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+$bottom-box-shadow: 0 0px 0px 0px rgba(0, 0, 0, 0), 0 0px 0px 0px rgba(0, 0, 0, 0), 1px 22px 13px -12px rgba(0, 0, 0, 0.3);
+
+//endPgeHr
+$endPgeHr: width(500px), margin-top(30px);
+
+// loader
+$loading--width: 250px;
+$loading-dot--size: 20px;
+
+app-top-bar {
+width: 100%;
+height: 68px;
+background-color: #1976d2;
+padding: 16px;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+}
+
+app-top-bar h1 {
+  color: white;
+  margin: 0;
+}
+
+.fancy-button {
+    background-color: #1976d2;
+    color: #ffffff;
+    border-radius: 4px;
+  }
+  
+  .fancy-button i.material-icons {
+    color: #1976d2;
+    padding-right: 4px;
+  }
+
+  .material-icons {
+    font-size: 34px;
+}

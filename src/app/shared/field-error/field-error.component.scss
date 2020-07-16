@@ -1,0 +1,13 @@
+.field-error {
+  display: flex;
+
+  &-icon {
+    padding-right: 5px;
+    font-size: 21px;
+  }
+
+  &-text {
+    padding-top: 1px;
+    font-size: 14px;
+  }
+}

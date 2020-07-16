@@ -1,9 +1,26 @@
+import { IEnvironmentConfiguration } from 'src/app/models/shared/environment-configuration.interface';
+
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-export const environment = {
-  production: false
+export const environment: IEnvironmentConfiguration = {
+  production: false,
+  apiVersion: '1.0',
+  version: 'DEV',
+  origin: 'localhost:4200',
+  
+  apiConfig: {
+    apiUrl: 'https://localhost:5001/api',
+    bookingsUrl: '/booking',
+    clientsUrl: '/client',
+    vehiclesUrl: '/vehicle',
+  },
+
+  retryConfig: {
+    initialInterval: 1000,
+    maxRetries: 5
+  }
 };
 
 /*

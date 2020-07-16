@@ -1,0 +1,65 @@
+<h1>Bookings</h1>
+<hr>
+<div class="row">
+    <div class="form-group col-md-3 d-inline">
+        <h5>Select Start Date</h5>
+        <div class="input-group">
+            <input class="form-control" placeholder="yyyy-mm-dd" name="dp1" [(ngModel)]="modelStart" ngbDatepicker
+                #d1="ngbDatepicker">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary calendar fa fa-calendar" (click)="d1.toggle()" type="button"></button>
+            </div>
+        </div>
+    </div>
+    <div class="form-group col-md-3 d-inline">
+        <h5>Select End Date</h5>
+        <div class="input-group">
+            <input class="form-control" placeholder="yyyy-mm-dd" name="dp2" [(ngModel)]="modelEnd" ngbDatepicker
+                #d2="ngbDatepicker">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary calendar fa fa-calendar" (click)="d2.toggle()" type="button"></button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+<div class="col-md-3 d-inline">
+    <button class="btn fancy-button" (click)="onSearchClick({startDate: d1.value}, {endDate: d2.value});">
+        Search 
+    </button>
+</div>
+<div class="col-md-9 d-inline" style="text-align: right;">
+    <button class="btn fancy-button">
+        Add Booking
+    </button>
+</div>
+</div>
+<hr>
+<table id="bookings">
+    <tr>
+        <th *ngFor="let column of headers">
+            {{column}}
+        </th>
+    </tr>
+    <tr *ngFor="let booking of bookingsList; let i=index">
+        <td>
+            {{ i }}
+        </td>
+        <td>
+            {{ booking.bookingDate }}
+        </td>
+        <td>
+            {{ booking.clientId }}
+        </td>
+        <td>
+            {{ booking.vehicleId }}
+        </td>
+        <td>
+            {{ booking.notes }}
+        </td>
+        <td>
+            <button class='material-icons'>build_circle</button>
+            <button class='material-icons'>cancel</button>
+        </td>
+    </tr>
+</table>

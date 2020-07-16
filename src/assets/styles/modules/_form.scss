@@ -1,0 +1,73 @@
+.custom-control-label::before {
+  background: $white;
+  border: 2px $secondary solid;
+}
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+  border-color: $primary;
+}
+
+
+.form-control {
+  &.input-validation-error {
+      border-color: $danger;
+
+      &:focus {
+          box-shadow: 0 0 0 0.2rem rgba($danger, 0.25);
+      }
+  }
+}
+
+.field-validation-error {
+  color: $danger;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.input-group {
+ > .form-label-group {
+  position: relative;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 1%;
+  margin-bottom: 0;
+  &:not(:last-child) {
+    .form-control {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-right: 0;
+    }
+  }
+ }
+}
+
+.form {
+  &-control {
+    &.is-invalid, &.is-valid, &:invalid, &:valid {
+      padding-right: $input-btn-padding-x;
+    }
+  }
+  &-addon {
+    position: relative;
+    .form-control {
+      padding-right: $input-height-inner;
+    }
+    &-append {
+      color: $gray-400;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: rem(40px);
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      outline: none;
+      padding: 0;
+      &.btn {
+        outline: none;
+        box-shadow: none;
+      }
+    }
+  }
+}
